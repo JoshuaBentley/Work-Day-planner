@@ -7,7 +7,7 @@ textarea {
   background: transparent;
   border: none;
   resize: none;
-  color: #000000;
+  color: #fffefe;
   border-left: 1px solid black;
   padding: 10px;
 }
@@ -26,22 +26,22 @@ textarea {
 
 .hour {
   background-color: #ffffff;
-  color: #000000;
+  color: #db7e03;
   border-top: 1px dashed #000000;
 }
 
-.past {
-  background-color: #d3d3d3;
+.past{
+  background-color: #42065e;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #540c08;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #062b06;
   color: white;
 }
 
@@ -49,8 +49,8 @@ textarea {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
+  background-color: #050254;
+  color: rgb(177, 164, 17);
 }
 
 .saveButton i:hover {
