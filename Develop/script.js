@@ -1,10 +1,6 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-
-
 $(function () {
  //variables useed 
+
   var setDate = dayjs();
   var changingSchedule = setDate.format('H');
   var showingDate = setDate.format('dddd MMMM DD, YYYY');
@@ -20,7 +16,8 @@ $(function () {
   var text5 = $('.description5');
   var text6 = $('.description6');
   var text7 = $('.description7');
-  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  
+  
  
   // setting the date and time 
   $('p#currentDay').text(showingDate);
@@ -82,8 +79,19 @@ $('.buttonToLocal7').click(function() {
   localStorage.setItem('toDoAt7', $(text7).val());
 })
 
+// Display stored data on associated time
 
-
+text9.text(localStorage.getItem('toDoAt9'))
+text10.text(localStorage.getItem('toDoAt10'))
+text11.text(localStorage.getItem('toDoAt11'))
+text12.text(localStorage.getItem('toDoAt12'))
+text1.text(localStorage.getItem('toDoAt1'))
+text2.text(localStorage.getItem('toDoAt2'))
+text3.text(localStorage.getItem('toDoAt3'))
+text4.text(localStorage.getItem('toDoAt4'))
+text5.text(localStorage.getItem('toDoAt5'))
+text6.text(localStorage.getItem('toDoAt6'))
+text7.text(localStorage.getItem('toDoAt7'))
 //making the background color of the textarea change based on the time of day
 
 console.log(changingSchedule)
