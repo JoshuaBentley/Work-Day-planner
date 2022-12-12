@@ -5,28 +5,89 @@
 
 $(function () {
  //variables useed 
-  var setDate = dayjs()
-  var changingSchedule = setDate.format("H")
-  var showingDate = setDate.format('dddd MMMM DD, YYYY')
-  var showingTime = setDate.format('hh' + ':' + 'mm A')
-  var toDo = $("textarea")
-  
+  var setDate = dayjs();
+  var changingSchedule = setDate.format('H');
+  var showingDate = setDate.format('dddd MMMM DD, YYYY');
+  var showingTime = setDate.format('hh' + ':' + 'mm A');
+  var text9 = $('.description9');
+  var text10 = $('.description10');
+  var text11 = $('.description11');
+  var text12 = $('.description12');
+  var text1 = $('.description1');
+  var text2 = $('.description2');
+  var text3 = $('.description3');
+  var text4 = $('.description4');
+  var text5 = $('.description5');
+  var text6 = $('.description6');
+  var text7 = $('.description7');
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+ 
   // setting the date and time 
-  $("p#currentDay").text(showingDate)
-  $("p#currentTime").text(showingTime)
+  $('p#currentDay').text(showingDate);
+  $('p#currentTime').text(showingTime);
 
   // click function that should save the users schedule to local storage
-  $(".saveButton").click(function() {
-      console.log("I work")
-      localStorage.setItem("toDoList", )
+  $('.buttonToLocal9').click(function() {
+      console.log('I work');
+      localStorage.setItem('toDoAt9', $(text9).val());
   })
 
+  $('.buttonToLocal10').click(function() {
+    console.log('I work');
+    localStorage.setItem('toDoAt10', $(text10).val());
+})
+
+$('.buttonToLocal11').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt11', $(text11).val());
+})
+
+$('.buttonToLocal12').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt12', $(text12).val());
+})
+
+$('.buttonToLocal1').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt1', $(text1).val());
+})
+
+$('.buttonToLocal2').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt2', $(text2).val());
+})
+
+$('.buttonToLocal3').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt3', $(text3).val());
+})
+
+$('.buttonToLocal4').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt4', $(text4).val());
+})
+
+$('.buttonToLocal5').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt5', $(text5).val());
+})
+
+$('.buttonToLocal6').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt6', $(text6).val());
+})
+
+$('.buttonToLocal7').click(function() {
+  console.log('I work');
+  localStorage.setItem('toDoAt7', $(text7).val());
+})
 
 
-  console.log(changingSchedule)
-  
+
 //making the background color of the textarea change based on the time of day
+
+console.log(changingSchedule)
+
   if ( changingSchedule < 9) {
     $('div#hour-9').addClass('future')
   } else if (changingSchedule >= 9 && changingSchedule < 10) {
@@ -46,8 +107,8 @@ $(function () {
     $('div#hour-10').removeClass('future')
     $('#hour-10').addClass('present')
   } else if (changingSchedule >= 11 && changingSchedule <= 24) {
-    $('div#hour-10').remove('present')
-    $('#hour-10').addClass('past')
+    $('div#hour-10').remove('present');
+    $('#hour-10').addClass('past');
   } else { 
     $('div#hour-10').remove('past')
     $('#hour-10').addClass('future')
@@ -172,12 +233,7 @@ $(function () {
 
 
  
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
+  
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
